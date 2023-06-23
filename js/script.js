@@ -69,15 +69,18 @@ sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
 const modeToggle = document.getElementById('mode-toggle');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
+const popup = document.getElementById('num2-popup');
+
 const invertElements = document.getElementsByClassName('invert-color');
 
-modeToggle.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
-    header.classList.toggle('dark-mode');
+modeToggle.addEventListener('click', function() {
+  body.classList.toggle('dark-mode');
+  header.classList.toggle('dark-mode');
+  popup.classList.toggle('dark-mode');
 
-    for (let i = 0; i < invertElements.length; i++) {
-        invertElements[i].classList.toggle('invert-color');
-    }
+  for (let i = 0; i < invertElements.length; i++) {
+    invertElements[i].classList.toggle('invert-color');
+  }
 });
 
 /*===== Work pop up =====*/
